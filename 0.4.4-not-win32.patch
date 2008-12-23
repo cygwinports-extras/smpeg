@@ -1,0 +1,20 @@
+--- smpeg-0.4.4-orig/configure.in	2001-04-24 14:25:39.000000000 -0500
++++ smpeg-0.4.4/configure.in	2005-08-07 15:03:08.000000000 -0500
+@@ -72,7 +72,7 @@
+     *-*-beos*)
+         ac_default_prefix=/boot/develop/tools/gnupro
+         ;;
+-    *-*-cygwin* | *-*-mingw32*)
++    *-*-mingw32*)
+         if test "$build" != "$target"; then # cross-compiling
+             ac_default_prefix=/usr/local/cross-tools/i386-mingw32msvc
+         fi
+@@ -211,7 +211,7 @@
+ have_glu=no
+ if test x$enable_opengl_player = xyes; then
+     case "$target" in
+-        *-*-cygwin* | *-*-mingw32*)
++        *-*-mingw32*)
+             SYS_GL_LIBS="-lopengl32 -lglu32"
+             ;;
+         *-*-beos*)

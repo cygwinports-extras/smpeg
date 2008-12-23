@@ -1,0 +1,10 @@
+--- smpeg-0.4.4-orig/Makefile.am	2001-04-04 15:28:14.000000000 -0500
++++ smpeg-0.4.4/Makefile.am	2005-08-07 15:03:33.000000000 -0500
+@@ -34,6 +34,7 @@
+ 
+ libsmpeg_la_LDFLAGS = 		\
+         -release $(LT_RELEASE)	\
++	-no-undefined \
+ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ 
+ libsmpeg_la_LIBADD =		\

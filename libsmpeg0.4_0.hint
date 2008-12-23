@@ -1,0 +1,7 @@
+category: Audio Video
+requires: cygwin libSDL1.2_0
+external-source: smpeg
+sdesc: "SDL MPEG audio/video library (runtime)"
+ldesc: "SMPEG is a free MPEG1 video player library with sound support, 
+based on SDL.  SMPEG supports MPEG audio (MP3), MPEG-1 video, and MPEG 
+system streams."
