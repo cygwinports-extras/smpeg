@@ -12,6 +12,7 @@ PATCH_URI="
 	mirror://portage/media-libs/${PN}/files/${P}-missing-init.patch
 	0.4.4-not-win32.patch
 	0.4.4-no-undefined.patch
+	0.4.4-m4.patch
 "
 
 PKG_NAMES="${PN} lib${PN}0.4_0 lib${PN}-devel"
