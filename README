@@ -5,25 +5,27 @@ on SDL.  SMPEG supports MPEG audio (MP3), MPEG-1 video, and MPEG system
 streams.
 
 Library runtime requirements:
-  cygwin-1.5.25-15
-  libglib1.2_0-1.2.10-5
-  libgtk1.2_0-1.2.10-4
-  libGL1-7.2-2
-  libGLU1-7.2-2
-  libSDL1.2_0-1.2.13-2
-  libX11_6-1.1.5-1
+  cygwin-1.7.0-45
+  libgcc1-4.3.2-2
+  libglib1.2_0-1.2.10-10
+  libgtk1.2_0-1.2.10-10
+  libGL1-7.2-10
+  libGLU1-7.2-10
+  libSDL1.2_0-1.2.13-10
+  libstdc++6-4.3.2-2
+  libX11_6-1.2-10
 
 Build requirements:
 (besides corresponding devel packages)
-  autoconf2.5-2.63-1
-  automake1.9-1.9.6-3
+  autoconf2.5-2.63-10
+  automake1.9-1.9.6-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  libtool-2.2.6a-1
-  make-3.80-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  libtool-2.2.7a-12
+  make-3.81-2
   sed-4.1.5-2
 
 Canonical homepage:
@@ -39,6 +41,8 @@ Build instructions:
   cygport ./smpeg-0.4.4-X.cygport all
 
 This will create:
+  /usr/src/libsmpeg-devel-0.4.4-X.tar.bz2
+  /usr/src/libsmpeg0.4_0-0.4.4-X.tar.bz2
   /usr/src/smpeg-0.4.4-X-src.tar.bz2
   /usr/src/smpeg-0.4.4-X.tar.bz2
 
@@ -50,11 +54,10 @@ Files included in the binary packages:
   /usr/bin/glmovie.exe
   /usr/bin/gtv.exe
   /usr/bin/plaympeg.exe
-  /usr/share/doc/smpeg-0.4.4/CHANGES
-  /usr/share/doc/smpeg-0.4.4/COPYING
-  /usr/share/doc/smpeg-0.4.4/INSTALL
-  /usr/share/doc/smpeg-0.4.4/README
-  /usr/share/doc/smpeg-0.4.4/TODO
+  /usr/share/doc/smpeg/CHANGES
+  /usr/share/doc/smpeg/COPYING
+  /usr/share/doc/smpeg/README
+  /usr/share/doc/smpeg/TODO
   /usr/share/man/man1/gtv.1.gz
   /usr/share/man/man1/plaympeg.1.gz
 
@@ -83,25 +86,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 0.4.4-5 -----
-Rebuilt for modular X11.
-
------ version 0.4.4-4 -----
-Rebuilt with gcc-3.4 and X11 port of libSDL.
-Static library now included.
-
------ version 0.4.4-3 -----
-Rebuild changes:
-* gtv is built against the new port of gtk+;
-* glmovie (built against X11 GL) is now included;
-* fixed smpeg.m4 for automake-1.8.
-
------ version 0.4.4-2 -----
-Rebuilt against SDL-1.2.7-2.  The smpeg.m4 file was also fixed, so that 
-a configure test should be accurate.
-
------ version 0.4.4-1 -----
-Initial release for Cygwin.
+----- version 0.4.4-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

@@ -20,7 +20,11 @@ smpeg_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/man/"
 libsmpeg0_4_0_CONTENTS="usr/bin/*-0-4-0.dll"
 libsmpeg_devel_CONTENTS="usr/bin/*-config usr/include/ usr/lib/ usr/share/aclocal/"
 
-DISTCLEANFILES="acinclude.m4"
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	sed -i -e '/^\# Configure/,/^ifelse/d' acinclude.m4
+}
+
 WANT_AUTOMAKE=1.9
 NO_AUTOHEADER=1
 
