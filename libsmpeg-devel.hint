@@ -1,5 +1,5 @@
 category: Audio Video
-requires: cygwin libsmpeg0.4_0 libSDL-devel libstdc++6-devel
+requires: libsmpeg0.4_0 libSDL-devel libstdc++6-devel
 external-source: smpeg
 sdesc: "SDL MPEG audio/video library (development)"
 ldesc: "SMPEG is a free MPEG1 video player library with sound support, 
