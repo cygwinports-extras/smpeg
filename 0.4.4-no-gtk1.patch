@@ -1,0 +1,11 @@
+--- origsrc/smpeg-0.4.4/configure.in	2010-01-30 22:50:55.467279800 -0600
++++ src/smpeg-0.4.4/configure.in	2010-01-30 22:53:17.258389800 -0600
+@@ -199,7 +199,7 @@ AC_ARG_ENABLE(gtk_player,
+               , enable_gtk_player=yes)
+ have_gtk=no
+ if test x$enable_gtk_player = xyes; then
+-    AM_PATH_GTK(1.2.1, have_gtk=yes)
++dnl    AM_PATH_GTK(1.2.1, have_gtk=yes)
+     if test x$have_gtk = xyes; then
+        EXTRA_CFLAGS="$EXTRA_CFLAGS $GTK_CFLAGS"
+     fi

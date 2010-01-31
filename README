@@ -5,26 +5,23 @@ on SDL.  SMPEG supports MPEG audio (MP3), MPEG-1 video, and MPEG system
 streams.
 
 Library runtime requirements:
-  cygwin-1.7.0-45
-  libgcc1-4.3.2-2
-  libglib1.2_0-1.2.10-10
-  libgtk1.2_0-1.2.10-10
-  libGL1-7.2-10
-  libGLU1-7.2-10
-  libSDL1.2_0-1.2.13-10
-  libstdc++6-4.3.2-2
-  libX11_6-1.2-10
+  cygwin-1.7.1-1
+  libgcc1-4.3.4-3
+  libGL1-7.5.3-1
+  libGLU1-7.5.3-1
+  libSDL1.2_0-1.2.14-1
+  libstdc++6-4.3.4-3
 
 Build requirements:
 (besides corresponding devel packages)
-  autoconf2.5-2.63-10
+  autoconf2.5-2.65-1
   automake1.9-1.9.6-10
-  binutils-20080624-2
-  cygport-0.9.6-1
-  gawk-3.1.6-2
-  gcc4-core-4.3.2-2
-  gcc4-g++-4.3.2-2
-  libtool-2.2.7a-12
+  binutils-2.19.51-1
+  cygport-0.9.80-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-3
+  gcc4-g++-4.3.4-3
+  libtool-2.2.7a-15
   make-3.81-2
   sed-4.1.5-2
 
@@ -48,43 +45,10 @@ This will create:
 
 -------------------------------------------
 
-Files included in the binary packages:
-
-(smpeg)
-  /usr/bin/glmovie.exe
-  /usr/bin/gtv.exe
-  /usr/bin/plaympeg.exe
-  /usr/share/doc/smpeg/CHANGES
-  /usr/share/doc/smpeg/COPYING
-  /usr/share/doc/smpeg/README
-  /usr/share/doc/smpeg/TODO
-  /usr/share/man/man1/gtv.1.gz
-  /usr/share/man/man1/plaympeg.1.gz
-
-(libsmpeg0.4_0)
-  /usr/bin/cygsmpeg-0-4-0.dll
-
-(libsmpeg-devel)
-  /usr/bin/smpeg-config
-  /usr/include/smpeg/MPEG.h
-  /usr/include/smpeg/MPEGaction.h
-  /usr/include/smpeg/MPEGaudio.h
-  /usr/include/smpeg/MPEGerror.h
-  /usr/include/smpeg/MPEGfilter.h
-  /usr/include/smpeg/MPEGlist.h
-  /usr/include/smpeg/MPEGring.h
-  /usr/include/smpeg/MPEGstream.h
-  /usr/include/smpeg/MPEGsystem.h
-  /usr/include/smpeg/MPEGvideo.h
-  /usr/include/smpeg/smpeg.h
-  /usr/lib/libsmpeg.a
-  /usr/lib/libsmpeg.dll.a
-  /usr/lib/libsmpeg.la
-  /usr/share/aclocal/smpeg.m4
-
-------------------
-
 Port Notes:
+
+----- version 0.4.4-11 -----
+Disabled obsolete gtk+-1.2 viewer.
 
 ----- version 0.4.4-10 -----
 Initial release for Cygwin 1.7.
