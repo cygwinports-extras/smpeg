@@ -36,3 +36,5 @@ CYGCONF_ARGS="
 	--disable-mmx
 	--enable-opengl-player
 "
+
+KEEP_LA_FILES="none"
