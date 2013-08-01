@@ -1,0 +1,47 @@
+NAME="smpeg"
+VERSION=0.4.4
+RELEASE=12
+CATEGORY="Libs"
+SUMMARY="SDL MPEG audio/video library"
+DESCRIPTION="SMPEG is a free MPEG1 video player library with sound support,
+based on SDL.  SMPEG supports MPEG audio (MP3), MPEG-1 video, and MPEG
+system streams."
+HOMEPAGE="http://www.lokigames.com/development/smpeg.php3"
+SRC_URI="mirror://gentoo/smpeg-${VERSION}.tar.gz"
+PATCH_URI="
+	mirror://portage/media-libs/smpeg/files/smpeg-${VERSION}-m4.patch
+	mirror://portage/media-libs/smpeg/files/smpeg-${VERSION}-config.patch
+	mirror://portage/media-libs/smpeg/files/smpeg-${VERSION}-gcc41.patch
+	mirror://portage/media-libs/smpeg/files/smpeg-${VERSION}-flags.patch
+	mirror://portage/media-libs/smpeg/files/smpeg-${VERSION}-automake.patch
+	mirror://portage/media-libs/smpeg/files/smpeg-${VERSION}-mmx.patch
+	mirror://portage/media-libs/smpeg/files/smpeg-${VERSION}-malloc.patch
+	mirror://portage/media-libs/smpeg/files/smpeg-${VERSION}-missing-init.patch
+	0.4.4-not-win32.patch
+	0.4.4-no-undefined.patch
+	0.4.4-m4.patch
+	0.4.4-no-gtk1.patch
+"
+
+PKG_NAMES="libsmpeg0.4_0 libsmpeg-devel"
+libsmpeg0_4_0_CONTENTS="usr/bin/*-0-4-0.dll usr/share/doc/"
+libsmpeg_devel_CONTENTS="usr/bin/*-config usr/include/ usr/lib/ usr/share/aclocal/"
+PKG_IGNORE="usr/bin/plaympeg.exe usr/share/man/"
+
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	sed -i -e '/^\# Configure/,/^ifelse/d' acinclude.m4
+}
+
+WANT_AUTOMAKE=1.9
+NO_AUTOHEADER=1
+
+CYGCONF_ARGS="
+	--disable-assertions
+	--disable-debug
+	--disable-gtk-player
+	--disable-mmx
+	--disable-opengl-player
+"
+
+KEEP_LA_FILES="none"

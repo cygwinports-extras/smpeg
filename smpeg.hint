@@ -1,6 +1,0 @@
-category: Audio Video
-requires: libGL1 libGLU1 libSDL1.2_0 libsmpeg0.4_0
-sdesc: "SDL MPEG audio/video players"
-ldesc: "SMPEG is a free MPEG1 video player library with sound support, 
-based on SDL.  SMPEG supports MPEG audio (MP3), MPEG-1 video, and MPEG 
-system streams."
